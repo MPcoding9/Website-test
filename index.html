@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Son Auba Retreat — A Quiet Finca in the Hills of Mallorca</title>
+<meta name="description" content="Son Auba Retreat is a six-room finca hotel among olive groves in inland Mallorca — for slow mornings, stone terraces, and real rest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,560;1,9..144,460&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ========== Foundations ========== */
+  :root{
+    --limestone:#EFE7D8;
+    --sand:#F6F1E6;
+    --olive:#5C6440;
+    --olive-deep:#454A31;
+    --terracotta:#BE6B4B;
+    --terracotta-deep:#A2573B;
+    --charcoal:#2A2723;
+    --charcoal-soft:#443F38;
+    --white:#FFFDF9;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.25rem;
+    --space-5: 3.5rem;
+    --space-6: 5rem;
+    --space-7: 7rem;
+    --space-8: 9rem;
+
+    --fs-h1: clamp(2.75rem, 2.1rem + 3.2vw, 5.25rem);
+    --fs-h2: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+    --fs-h3: clamp(1.3rem, 1.15rem + 0.7vw, 1.75rem);
+    --fs-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+    --fs-body: 1.0625rem;
+    --fs-small: 0.9rem;
+    --fs-eyebrow: 0.8125rem;
+
+    --radius-lg: 28px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+
+    --ease: cubic-bezier(.22,.61,.36,1);
+    --shadow-soft: 0 20px 60px -25px rgba(42,39,35,.35);
+    --shadow-lift: 0 30px 70px -30px rgba(42,39,35,.45);
+
+    --nav-h: 84px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top: calc(var(--nav-h) + 14px);
+  }
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--charcoal);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:var(--fs-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,p{ margin:0; }
+  button{ font:inherit; }
+
+  h1,h2,h3,.font-display{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:480;
+    letter-spacing:-0.01em;
+    color:var(--charcoal);
+  }
+  h1{ font-size:var(--fs-h1); line-height:1.03; font-weight:480; }
+  h2{ font-size:var(--fs-h2); line-height:1.08; }
+  h3{ font-size:var(--fs-h3); line-height:1.25; font-weight:560; }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.6em;
+    font-size:var(--fs-eyebrow);
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--olive-deep);
+    font-weight:600;
+  }
+  .eyebrow::before{
+    content:"";
+    width:28px;
+    height:1px;
+    background:currentColor;
+    opacity:.6;
+  }
+  .lead{
+    font-size:var(--fs-lead);
+    line-height:1.6;
+    color:var(--charcoal-soft);
+    font-weight:400;
+  }
+
+  .wrap{
+    width:100%;
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline: var(--space-3);
+  }
+  section{ padding-block: var(--space-7); }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.55em;
+    padding: 0.95em 1.7em;
+    border-radius: 999px;
+    font-size: var(--fs-small);
+    font-weight:600;
+    letter-spacing:.02em;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease), background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background: var(--terracotta);
+    color: var(--white);
+    box-shadow: 0 14px 30px -12px rgba(162,87,59,.55);
+  }
+  .btn-primary:hover{
+    background: var(--terracotta-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px -12px rgba(162,87,59,.6);
+  }
+  .btn-ghost{
+    background: transparent;
+    color: var(--charcoal);
+    border-color: rgba(42,39,35,.22);
+  }
+  .btn-ghost:hover{
+    border-color: var(--charcoal);
+    transform: translateY(-2px);
+  }
+  .btn-light{
+    background: var(--white);
+    color: var(--charcoal);
+  }
+  .btn-light:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+  }
+  .btn svg{ width:16px; height:16px; }
+
+  /* ========== Reveal-on-scroll (progressive enhancement) ========== */
+  .js .reveal{
+    opacity:0;
+    transform: translateY(26px);
+    transition: opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  .js .reveal.in-view{
+    opacity:1;
+    transform:none;
+  }
+  .js .reveal-group .reveal:nth-child(1){ transition-delay:.05s; }
+  .js .reveal-group .reveal:nth-child(2){ transition-delay:.15s; }
+  .js .reveal-group .reveal:nth-child(3){ transition-delay:.25s; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .js .reveal{ opacity:1; transform:none; transition:none; }
+    .blob{ animation:none !important; }
+  }
+
+  /* ========== Nav ========== */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    height:var(--nav-h);
+    display:flex;
+    align-items:center;
+    background: rgba(246,241,230,.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom:1px solid rgba(42,39,35,.08);
+  }
+  .nav-inner{
+    width:100%;
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline:var(--space-3);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: var(--space-3);
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:.6em;
+    font-family:'Fraunces', serif;
+    font-weight:560;
+    font-size:1.15rem;
+    letter-spacing:-.01em;
+    color:var(--charcoal);
+  }
+  .brand svg{ width:26px; height:26px; color:var(--olive); flex-shrink:0; }
+  .brand span em{
+    font-style:normal;
+    color:var(--olive-deep);
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap: var(--space-4);
+  }
+  .nav-links a{
+    font-size:.92rem;
+    font-weight:500;
+    color:var(--charcoal-soft);
+    position:relative;
+    padding-block:.25rem;
+    transition: color .3s var(--ease);
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:-2px;
+    height:1px;
+    background: var(--olive-deep);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition: transform .35s var(--ease);
+  }
+  .nav-links a:hover{ color:var(--charcoal); }
+  .nav-links a:hover::after{ transform:scaleX(1); transform-origin:left; }
+  .nav-cta{ display:flex; align-items:center; gap:var(--space-2); }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    padding:.4rem;
+    cursor:pointer;
+    color:var(--charcoal);
+  }
+  .nav-toggle svg{ width:24px; height:24px; }
+
+  @media (max-width: 860px){
+    .nav-links{
+      position:absolute;
+      top:var(--nav-h);
+      left:0; right:0;
+      background: var(--sand);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      padding: var(--space-2) var(--space-3) var(--space-3);
+      border-bottom:1px solid rgba(42,39,35,.08);
+      box-shadow: var(--shadow-soft);
+      transform: translateY(-8px);
+      opacity:0;
+      pointer-events:none;
+      transition: opacity .3s var(--ease), transform .3s var(--ease);
+    }
+    .nav-links a{ padding:.85rem 0; width:100%; border-bottom:1px solid rgba(42,39,35,.06); }
+    .nav-links.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+    .nav-toggle{ display:inline-flex; }
+    .nav-cta .btn-ghost{ display:none; }
+  }
+
+  /* ========== Hero ========== */
+  .hero{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    min-height: calc(100svh - var(--nav-h));
+    display:flex;
+    align-items:center;
+    padding-block: var(--space-6) var(--space-7);
+    background:
+      radial-gradient(120% 90% at 8% 0%, #EFE0C8 0%, transparent 55%),
+      radial-gradient(90% 80% at 100% 10%, #C9CFAE 0%, transparent 50%),
+      radial-gradient(100% 100% at 85% 100%, #D98F6C 0%, transparent 45%),
+      radial-gradient(120% 100% at 0% 100%, #74794F 0%, transparent 55%),
+      linear-gradient(160deg, #EFE7D8 0%, #E4DCC7 45%, #D8CDAE 100%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(42,39,35,0) 55%, rgba(42,39,35,.10) 100%);
+    pointer-events:none;
+    z-index:1;
+  }
+  .blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:.55;
+    z-index:0;
+    will-change:transform;
+  }
+  .blob-1{
+    width:520px; height:520px;
+    top:-160px; left:-120px;
+    background: radial-gradient(circle at 30% 30%, #A7B383, transparent 70%);
+    animation: drift1 26s ease-in-out infinite alternate;
+  }
+  .blob-2{
+    width:460px; height:460px;
+    top:10%; right:-140px;
+    background: radial-gradient(circle at 60% 40%, #E3A67E, transparent 70%);
+    animation: drift2 32s ease-in-out infinite alternate;
+  }
+  .blob-3{
+    width:600px; height:600px;
+    bottom:-260px; left:20%;
+    background: radial-gradient(circle at 50% 50%, #C7B98A, transparent 70%);
+    animation: drift3 38s ease-in-out infinite alternate;
+  }
+  @keyframes drift1{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(60px,40px) scale(1.08); }
+  }
+  @keyframes drift2{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(-50px,60px) scale(1.06); }
+  }
+  @keyframes drift3{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(40px,-30px) scale(1.1); }
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline:var(--space-3);
+  }
+  .hero-card{
+    max-width:640px;
+    background: rgba(255,253,249,.6);
+    border:1px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5) var(--space-4);
+    box-shadow: var(--shadow-lift);
+  }
+  .hero-card h1{ margin-block: var(--space-2) var(--space-3); }
+  .hero-card .lead{ max-width:52ch; }
+  .hero-actions{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+  .hero-meta{
+    display:flex;
+    align-items:center;
+    gap:.6em;
+    font-size:var(--fs-small);
+    color:var(--charcoal-soft);
+  }
+  .hero-meta svg{ width:17px; height:17px; color:var(--olive-deep); flex-shrink:0; }
+
+  .hero-stats{
+    display:flex;
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+    padding-top: var(--space-3);
+    border-top:1px solid rgba(42,39,35,.14);
+  }
+  .hero-stat b{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    font-weight:560;
+    color:var(--olive-deep);
+  }
+  .hero-stat span{
+    font-size:.8rem;
+    color:var(--charcoal-soft);
+    letter-spacing:.02em;
+  }
+
+  /* ========== Section headers ========== */
+  .section-head{
+    max-width:640px;
+    margin-bottom: var(--space-5);
+  }
+  .section-head h2{ margin-top:var(--space-2); }
+  .section-head .lead{ margin-top:var(--space-2); }
+  .section-head.center{ margin-inline:auto; text-align:center; }
+  .section-head.center .eyebrow::before{ display:none; }
+
+  /* ========== Story / positioning strip ========== */
+  .story{ background:var(--white); }
+  .story-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-6);
+    align-items:start;
+  }
+  .story-copy p + p{ margin-top:var(--space-3); }
+  .story-copy p{ color:var(--charcoal-soft); }
+  .feature-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4) var(--space-3);
+  }
+  .feature{
+    display:flex;
+    flex-direction:column;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background: var(--sand);
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .feature:hover{ transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+  .feature .icon{
+    width:44px; height:44px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--olive);
+    color: var(--white);
+    flex-shrink:0;
+  }
+  .feature .icon svg{ width:20px; height:20px; }
+  .feature h3{ font-size:1.05rem; }
+  .feature p{ font-size:.92rem; color:var(--charcoal-soft); }
+
+  /* ========== How it works ========== */
+  .how{ background: var(--limestone); position:relative; overflow:hidden; }
+  .steps{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    counter-reset: step;
+    position:relative;
+  }
+  .steps::before{
+    content:"";
+    position:absolute;
+    top:52px; left:12%; right:12%;
+    height:1px;
+    background: repeating-linear-gradient(90deg, rgba(42,39,35,.25) 0 8px, transparent 8px 16px);
+  }
+  .step{
+    position:relative;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-3) var(--space-3);
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .step:hover{ transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+  .step-num{
+    width:46px; height:46px;
+    border-radius:50%;
+    background: var(--terracotta);
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-weight:560;
+    font-size:1.15rem;
+    margin-bottom: var(--space-3);
+    box-shadow: 0 10px 24px -10px rgba(162,87,59,.6);
+  }
+  .step h3{ margin-bottom:.5rem; }
+  .step p{ color:var(--charcoal-soft); font-size:.95rem; }
+
+  /* ========== Pricing ========== */
+  .pricing{ background: var(--white); }
+  .price-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    align-items:stretch;
+  }
+  .price-card{
+    display:flex;
+    flex-direction:column;
+    background: var(--sand);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border:1px solid rgba(42,39,35,.08);
+    transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease);
+  }
+  .price-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+  .price-card.featured{
+    background: var(--charcoal);
+    color: var(--sand);
+    border-color: var(--charcoal);
+    transform: scale(1.045);
+    box-shadow: var(--shadow-lift);
+    position:relative;
+    z-index:1;
+  }
+  .price-card.featured:hover{ transform: scale(1.045) translateY(-6px); }
+  .price-card.featured h3,
+  .price-card.featured .price-desc{ color: var(--sand); }
+  .price-card.featured .price-amount{ color:#F1CBA6; }
+  .price-card.featured .price-feats li{ color: rgba(246,241,230,.85); }
+  .price-card.featured .price-feats svg{ color:#C9CFAE; }
+  .badge{
+    align-self:flex-start;
+    font-size: .72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color: var(--white);
+    background: var(--terracotta);
+    padding:.35em .8em;
+    border-radius: 999px;
+    margin-bottom: var(--space-2);
+  }
+  .price-desc{ font-size:.92rem; color:var(--charcoal-soft); margin-top:.35rem; }
+  .price-amount{
+    display:flex;
+    align-items:baseline;
+    gap:.35em;
+    margin-block: var(--space-3);
+    font-family:'Fraunces', serif;
+    color: var(--olive-deep);
+  }
+  .price-amount .num{ font-size:2.5rem; font-weight:560; }
+  .price-amount .unit{ font-size:.85rem; color:var(--charcoal-soft); font-family:'Inter', sans-serif; }
+  .price-card.featured .price-amount .unit{ color: rgba(246,241,230,.7); }
+  .price-feats{ margin: var(--space-3) 0 var(--space-4); display:flex; flex-direction:column; gap:.7rem; flex-grow:1; }
+  .price-feats li{
+    display:flex;
+    align-items:flex-start;
+    gap:.65em;
+    font-size:.92rem;
+    color: var(--charcoal-soft);
+  }
+  .price-feats svg{ width:17px; height:17px; flex-shrink:0; margin-top:.15em; color:var(--olive-deep); }
+  .price-card .btn{ width:100%; justify-content:center; }
+
+  /* ========== Testimonials ========== */
+  .testimonials{ background: var(--limestone); }
+  .quote-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  .quote-card{
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    display:flex;
+    flex-direction:column;
+    gap: var(--space-3);
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .quote-card:hover{ transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+  .stars{ display:flex; gap:.25rem; color: var(--terracotta); }
+  .stars svg{ width:16px; height:16px; }
+  .quote-card p.quote-text{
+    font-family:'Fraunces', serif;
+    font-size:1.1rem;
+    font-weight:400;
+    font-style:italic;
+    line-height:1.5;
+    color: var(--charcoal);
+  }
+  .quote-person{ display:flex; align-items:center; gap:.75rem; margin-top:auto; }
+  .quote-avatar{
+    width:40px; height:40px;
+    border-radius:50%;
+    background: var(--olive);
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:.95rem;
+    flex-shrink:0;
+  }
+  .quote-person span{ display:block; font-size:.85rem; color:var(--charcoal-soft); }
+  .quote-person strong{ font-size:.95rem; font-weight:600; }
+
+  /* ========== Contact ========== */
+  .contact{ background: var(--white); }
+  .contact-grid{
+    display:grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: var(--space-6);
+  }
+  .contact-info p{ color:var(--charcoal-soft); margin-top:var(--space-2); }
+  .contact-list{ margin-top: var(--space-4); display:flex; flex-direction:column; gap: var(--space-3); }
+  .contact-list li{ display:flex; align-items:flex-start; gap:.85em; font-size:.95rem; }
+  .contact-list .icon{
+    width:38px; height:38px;
+    border-radius:50%;
+    background: var(--limestone);
+    color: var(--olive-deep);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-list .icon svg{ width:17px; height:17px; }
+  .contact-list b{ display:block; font-weight:600; margin-bottom:.15rem; }
+  .contact-list span{ color:var(--charcoal-soft); }
+
+  .contact-form{
+    background: var(--sand);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border:1px solid rgba(42,39,35,.08);
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap: var(--space-3); }
+  .field{ margin-bottom: var(--space-3); display:flex; flex-direction:column; gap:.45rem; }
+  .field label{ font-size:.82rem; font-weight:600; color:var(--charcoal-soft); letter-spacing:.02em; }
+  .field input,
+  .field textarea{
+    font: inherit;
+    font-size:.95rem;
+    padding:.85em 1em;
+    border-radius: var(--radius-sm);
+    border:1px solid rgba(42,39,35,.18);
+    background: var(--white);
+    color: var(--charcoal);
+    transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .field input:focus,
+  .field textarea:focus{
+    outline:none;
+    border-color: var(--olive);
+    box-shadow: 0 0 0 3px rgba(92,100,64,.18);
+  }
+  .field textarea{ resize:vertical; min-height:110px; font-family:inherit; }
+  .contact-form .btn{ margin-top:.25rem; }
+  .form-note{ font-size:.82rem; color:var(--charcoal-soft); margin-top:var(--space-2); }
+
+  /* ========== Footer ========== */
+  footer{
+    background: var(--charcoal);
+    color: rgba(246,241,230,.75);
+    padding-block: var(--space-5) var(--space-4);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom:1px solid rgba(246,241,230,.14);
+  }
+  .footer-brand{
+    display:flex; align-items:center; gap:.6em;
+    font-family:'Fraunces', serif;
+    font-size:1.1rem;
+    color: var(--sand);
+  }
+  .footer-brand svg{ width:24px; height:24px; color:#C9CFAE; }
+  .footer-tag{ font-size:.85rem; margin-top:.6rem; max-width:32ch; color:rgba(246,241,230,.55); }
+  .footer-links{ display:flex; gap: var(--space-5); flex-wrap:wrap; }
+  .footer-col h4{
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color: rgba(246,241,230,.5);
+    margin-bottom: var(--space-2);
+    font-weight:600;
+  }
+  .footer-col ul{ display:flex; flex-direction:column; gap:.6rem; }
+  .footer-col a{ font-size:.9rem; color: rgba(246,241,230,.8); transition:color .3s var(--ease); }
+  .footer-col a:hover{ color: var(--white); }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap: var(--space-2);
+    padding-top: var(--space-3);
+    font-size:.8rem;
+    color: rgba(246,241,230,.45);
+  }
+  .footer-social{ display:flex; gap: var(--space-2); }
+  .footer-social a{
+    width:36px; height:36px;
+    border-radius:50%;
+    border:1px solid rgba(246,241,230,.18);
+    display:flex; align-items:center; justify-content:center;
+    transition: border-color .3s var(--ease), transform .3s var(--ease);
+  }
+  .footer-social a:hover{ border-color: rgba(246,241,230,.6); transform: translateY(-2px); }
+  .footer-social svg{ width:16px; height:16px; color: rgba(246,241,230,.8); }
+
+  /* ========== Responsive ========== */
+  @media (max-width: 980px){
+    .story-grid{ grid-template-columns:1fr; gap: var(--space-5); }
+    .steps{ grid-template-columns:1fr; }
+    .steps::before{ display:none; }
+    .price-grid{ grid-template-columns:1fr; }
+    .price-card.featured{ transform:none; order:-1; }
+    .price-card.featured:hover{ transform: translateY(-6px); }
+    .quote-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; gap: var(--space-5); }
+    .form-row{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 640px){
+    :root{ --nav-h:72px; }
+    .nav-inner{ gap: var(--space-2); }
+    .brand{ font-size:.95rem; white-space:nowrap; }
+    .brand span{ white-space:nowrap; }
+    .nav-cta{ gap:.6rem; }
+    .nav-cta .btn-primary{ padding:.75em 1.05em; font-size:.82rem; }
+    .nav-cta .btn-primary svg{ display:none; }
+    section{ padding-block: var(--space-6); }
+    .hero{ padding-block: var(--space-5) var(--space-6); }
+    .hero-card{ padding: var(--space-4) var(--space-3); }
+    .hero-stats{ gap: var(--space-3); flex-wrap:wrap; }
+    .feature-list{ grid-template-columns:1fr; }
+    .footer-inner{ flex-direction:column; }
+    .footer-links{ gap: var(--space-4); }
+  }
+</style>
+</head>
+<body>
+
+<a class="visually-hidden-focusable" href="#main" style="position:absolute; left:-999px; top:0; background:var(--olive); color:#fff; padding:.75rem 1.25rem; z-index:1000;" onfocus="this.style.left='1rem'; this.style.top='1rem';" onblur="this.style.left='-999px';">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Son Auba Retreat, home">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 4C24 4 14 14 14 24C14 30.6274 18.4772 36 24 36C29.5228 36 34 30.6274 34 24C34 14 24 4 24 4Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M24 36V44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17 40H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Son Auba <em>Retreat</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#finca">The Finca</a>
+      <a href="#how">How It Works</a>
+      <a href="#stays">Stays &amp; Rates</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Enquire</a>
+      <a href="#contact" class="btn btn-primary">
+        Book Now
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-2" aria-hidden="true"></span>
+    <span class="blob blob-3" aria-hidden="true"></span>
+    <div class="hero-inner">
+      <div class="hero-card reveal">
+        <span class="eyebrow">Inland Mallorca · Six Rooms Only</span>
+        <h1>Wake to olive trees. Leave slower than you arrived.</h1>
+        <p class="lead">Son Auba Retreat is a restored 18th-century finca folded into the hills above the Tramuntana foothills — stone terraces, shaded courtyards, and mornings with nowhere to be. No resort strip, no crowds, just twelve hectares of quiet and a table set for breakfast.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Book Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="hero-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Free cancellation up to 5 days before arrival
+          </span>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>6</b><span>Rooms &amp; suites</span></div>
+          <div class="hero-stat"><b>12ha</b><span>Olive groves &amp; gardens</span></div>
+          <div class="hero-stat"><b>20min</b><span>From Palma, worlds away</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FINCA / STORY -->
+  <section class="story" id="finca">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="reveal">
+          <span class="eyebrow">The Finca</span>
+          <h2 style="margin-top:var(--space-2);">A house built for doing very little, very well</h2>
+          <div class="story-copy" style="margin-top:var(--space-3);">
+            <p>Son Auba began as a working olive estate in the 1780s, and it still is one. The old press room is now our breakfast kitchen; the drying terraces are where you'll take coffee at nine and wine at seven. We kept the thick limestone walls, the uneven floors, the quiet.</p>
+            <p>There are six rooms in total, spread across the main house and two garden casitas, so the finca never feels fuller than a good dinner party. No spa menu, no daily itinerary — just a place that holds its shape and lets you slow down inside it.</p>
+          </div>
+        </div>
+        <div class="feature-list reveal-group">
+          <div class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-5 6-5 9a5 5 0 0 0 10 0c0-3-2-6-5-9z"/><path d="M12 12v9"/><path d="M8 21h8"/></svg>
+            </span>
+            <h3>Old olive groves</h3>
+            <p>Ninety-year-old trees you can walk among, and oil pressed on-site each November.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="10" rx="1"/><path d="M5 10V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v4"/><path d="M9 15h6"/></svg>
+            </span>
+            <h3>Stone terraces</h3>
+            <p>Hand-laid marès stone, warm underfoot, made for slow lunches in dappled shade.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21V9l6-5 6 5v12"/><path d="M9 21v-6h6v6"/></svg>
+            </span>
+            <h3>Shaded courtyards</h3>
+            <p>Three interior patios cooled by fig and citrus trees — no two mornings look alike.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H4z"/><path d="M2 19h20"/><path d="M8 15V9M12 15V9M16 15V9"/></svg>
+            </span>
+            <h3>A local breakfast table</h3>
+            <p>Bread from the village oven, our own oil and honey, eggs from the neighbouring farm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2>Three steps between here and the terrace</h2>
+        <p class="lead">Booking a quiet stay should feel just as unhurried as the stay itself.</p>
+      </div>
+      <div class="steps reveal-group">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Choose your stay</h3>
+          <p>Pick from three room types built for different kinds of quiet — a courtyard room for a short reset, the terrace suite for the full finca experience, or a private casita for total seclusion.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h3>Arrive &amp; settle in</h3>
+          <p>We collect you from Palma or Manacor by request. On arrival: a glass of house wine, a walk through the groves, and a room already turned down for the evening.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h3>Live at finca pace</h3>
+          <p>Breakfast whenever you wake. Long lunches, longer swims, and nothing on the schedule unless you ask us to arrange it — a boat day, a vineyard visit, a massage on the terrace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="stays">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Stays &amp; Rates</span>
+        <h2>Three ways to stay quiet</h2>
+        <p class="lead">Every rate includes breakfast, garden access, and the kind of silence you came for. Peak season, per night, before tax.</p>
+      </div>
+      <div class="price-grid reveal-group">
+
+        <div class="price-card reveal">
+          <h3>Courtyard Room</h3>
+          <p class="price-desc">For a short, restorative stay</p>
+          <div class="price-amount"><span class="num">€195</span><span class="unit">/ night, 2 guests</span></div>
+          <ul class="price-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Courtyard-facing room, 24m²</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Local breakfast on the terrace</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Shared pool &amp; olive grove access</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Two-night minimum stay</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Check Availability</a>
+        </div>
+
+        <div class="price-card featured reveal">
+          <span class="badge">Most Booked</span>
+          <h3>Terrace Suite</h3>
+          <p class="price-desc">For the full finca experience</p>
+          <div class="price-amount"><span class="num">€310</span><span class="unit">/ night, 2 guests</span></div>
+          <ul class="price-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Suite with private stone terrace, 40m²</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Breakfast served in-room or on terrace</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Outdoor soaking tub &amp; grove views</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One complimentary sunset wine tasting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Late checkout, whenever possible</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Check Availability</a>
+        </div>
+
+        <div class="price-card reveal">
+          <h3>Private Casita</h3>
+          <p class="price-desc">For maximum privacy</p>
+          <div class="price-amount"><span class="num">€420</span><span class="unit">/ night, 2 guests</span></div>
+          <ul class="price-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Detached one-bedroom casita, 58m²</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Private plunge pool &amp; walled garden</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Breakfast basket left at your gate</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Own entrance, no shared paths</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Three-night minimum stay</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Check Availability</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">From Past Guests</span>
+        <h2>What people notice first is the quiet</h2>
+      </div>
+      <div class="quote-grid reveal-group">
+        <div class="quote-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <p class="quote-text">"We came from Barcelona for four nights and didn't leave the property once. The terrace suite, breakfast under the fig tree — it's the first holiday in years that actually felt like rest."</p>
+          <div class="quote-person">
+            <div class="quote-avatar">M&amp;J</div>
+            <div><strong>Marta &amp; Jonas</strong><span>Barcelona, Spain</span></div>
+          </div>
+        </div>
+        <div class="quote-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <p class="quote-text">"Travelling solo, I was worried a finca hotel might feel isolating. It was the opposite — private enough to write all morning, warm enough that dinner conversation with the owners was a highlight."</p>
+          <div class="quote-person">
+            <div class="quote-avatar">R</div>
+            <div><strong>Rebecca Lindqvist</strong><span>Stockholm, Sweden</span></div>
+          </div>
+        </div>
+        <div class="quote-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <p class="quote-text">"The casita is worth every euro. Our own gate, our own pool, and still five minutes' walk to a breakfast table that tasted like someone's actual kitchen. Booking again for our anniversary."</p>
+          <div class="quote-person">
+            <div class="quote-avatar">D&amp;A</div>
+            <div><strong>David &amp; Anna Cole</strong><span>London, UK</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Get in Touch</span>
+          <h2 style="margin-top:var(--space-2);">Plan your stay</h2>
+          <p>Tell us your dates and what kind of quiet you're after — we'll reply within one working day with availability and a personal recommendation on rooms.</p>
+          <ul class="contact-list">
+            <li>
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><b>Address</b><span>Camí de Son Auba, Km 4, 07500 Manacor, Mallorca</span></div>
+            </li>
+            <li>
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div><b>Phone</b><span>+34 971 55 02 18</span></div>
+            </li>
+            <li>
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span>
+              <div><b>Email</b><span>hola@sonaubaretreat.com</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="enquiryForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="checkin">Arrival</label>
+              <input type="date" id="checkin" name="checkin">
+            </div>
+            <div class="field">
+              <label for="checkout">Departure</label>
+              <input type="date" id="checkout" name="checkout">
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Tell us about your stay</label>
+            <textarea id="message" name="message" placeholder="Number of guests, room preference, and anything else we should know."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Send Enquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-note">We reply personally, usually within one working day.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 4C24 4 14 14 14 24C14 30.6274 18.4772 36 24 36C29.5228 36 34 30.6274 34 24C34 14 24 4 24 4Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M24 36V44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M17 40H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Son Auba Retreat
+        </div>
+        <p class="footer-tag">A six-room finca hotel among the olive groves of inland Mallorca. Quiet by design.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#finca">The Finca</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#stays">Stays &amp; Rates</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Directions</a></li>
+            <li><a href="#contact">Book Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Son Auba Retreat. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-5 1.5-7a2 2 0 1 1 4 0c0 1.5-1 3.5-1 5 0 1 .5 2 1.8 2 2.2 0 3.7-2.5 3.7-5.5 0-2.8-2-5-5.5-5-3.8 0-6 2.7-6 5.5 0 1 .3 1.7.8 2.3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    document.documentElement.classList.add('js');
+
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function(){
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    var form = document.getElementById('enquiryForm');
+    if (form) {
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.textContent = 'Enquiry Sent — Gracias'; btn.disabled = true; }
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in-view'); });
+    }
+  })();
+</script>
+
+</body>
+</html>
